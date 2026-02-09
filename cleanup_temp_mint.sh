@@ -8,36 +8,28 @@ set -euo pipefail
 #   ./cleanup_temp_mint.sh --all            # rimuove tutto in /tmp e /var/tmp
 #   ./cleanup_temp_mint.sh --help           # mostra questo aiuto
 
-# Flag: se true mostra solo le operazioni senza eseguirle.
 DRY_RUN=false
-# Flag: se true rimuove tutto in /tmp e /var/tmp (non solo file vecchi).
 REMOVE_ALL=false
 
-# Parsing semplice degli argomenti in linea di comando.
 for arg in "$@"; do
   case "$arg" in
     --dry-run)
-      # Attiva la modalità di simulazione.
       DRY_RUN=true
       ;;
     --all)
-      # Attiva la pulizia completa di /tmp e /var/tmp.
       REMOVE_ALL=true
       ;;
     --help|-h)
-      # Stampa un breve aiuto e termina.
       sed -n '1,12p' "$0"
       exit 0
       ;;
     *)
-      # Qualsiasi altra opzione è considerata un errore.
       echo "Opzione non riconosciuta: $arg" >&2
       exit 1
       ;;
   esac
 done
 
-# Esegue un comando reale o lo stampa se in dry-run.
 run_cmd() {
   if $DRY_RUN; then
     echo "[DRY-RUN] $*"
