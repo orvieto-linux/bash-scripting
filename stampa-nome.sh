@@ -9,6 +9,14 @@
 #        e con interpretazione dei backslash.
 read -r -p "Inserisci il nome della persona: " nome
 
+# Verifica che l'utente abbia inserito almeno un valore.
+# [[ -z ... ]]: condizione vera se la stringa è vuota (zero caratteri).
+if [[ -z "${nome}" ]]; then
+  # Stampa un messaggio di errore e termina lo script con codice 1.
+  echo "Errore: non hai inserito alcun nome."
+  exit 1
+fi
+
 # Stampa il saluto finale.
 # echo: built-in che scrive testo su output standard.
 # Opzioni usate:
