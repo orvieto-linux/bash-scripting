@@ -10,4 +10,4 @@ echo "Nome: $1"
 echo "Cognome: $2"
 Echo "Email: $3"
 
-./script nome cognome email
+# si esegue con ./script.sh nome cognome email
