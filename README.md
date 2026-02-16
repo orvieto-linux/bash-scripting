@@ -4,28 +4,6 @@
 In questo repo, vengono ospitati i file della serata dedicata al BASH scripting.
 Oltre agli esercizi proposti trovate anche altri script bonus, il cui funzionamento è spiegato di seguito.
 
-## Script di pulizia per Linux Mint
-
-File: `cleanup_temp_mint.sh`
-
-### Uso
-
-```bash
-./cleanup_temp_mint.sh
-```
-
-Modalità di prova (non elimina nulla):
-
-```bash
-./cleanup_temp_mint.sh --dry-run
-```
-
-Rimozione completa in `/tmp` e `/var/tmp`:
-
-```bash
-./cleanup_temp_mint.sh --all
-```
-
 ## Script di saluto personalizzato
 
 File: `stampa-nome.sh`
@@ -75,3 +53,27 @@ Lo script richiede in input:
 # URL: https://github.com/madler/zlib/archive/refs/heads/master.zip
 # Percorso assoluto: /tmp/prova-download
 ```
+
+## Script di pulizia per Linux Mint
+
+File: `cleanup_temp_mint.sh`
+
+### Uso
+
+```bash
+./cleanup_temp_mint.sh
+```
+
+Modalità di prova (non elimina nulla):
+
+```bash
+./cleanup_temp_mint.sh --dry-run
+```
+
+Rimozione completa in `/tmp` e `/var/tmp`:
+
+```bash
+./cleanup_temp_mint.sh --all
+```
+
+
