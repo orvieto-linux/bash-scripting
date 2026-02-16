@@ -4,6 +4,9 @@
 In questo repo, vengono ospitati i file della serata dedicata al BASH scripting.
 Oltre agli esercizi proposti trovate anche altri script bonus, il cui funzionamento è spiegato di seguito.
 
+
+
+
 ## Script di saluto personalizzato
 
 File: `stampa-nome.sh`
